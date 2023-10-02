@@ -1,0 +1,15 @@
+---
+name: Test M1 runners
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: macos-latest-xlarge
+
+    steps:
+      - name: Echo Stuff
+        run: curl -OL https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch && chmod +x pfetch && ./pfetch
